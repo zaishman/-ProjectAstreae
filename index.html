@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            shack
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js'></script>
+    </head>
+    <body>
+
+        <!--WELCOME SCREEN-->
+        <div id="welcome">
+            <p class="welcomeNote">welcome to</p>
+            <h1 class="shackName">@projectastraea</h1>
+            <button id="enterShack">></button>
+        </div>
+
+        <!--HOMEPAGE-->
+        <div id="homescreen" style="display:none">
+            <div id="map-background"></div>            
+            <div id="left-panel">
+
+        <div id="clock"></div>
+
+            <p class="project-astraea">@projectastraea</p>
+            <div id="greeting"></div>
+            <p class="learn-transatlantically">Learn, <i>transantlantically</i></p>
+
+
+            <div id="horizontal-line-1"></div>
+
+            <div id="text-container">
+            <p class="greeting-message">Welcome to <b>Project Astraea</b>, a global AI study reasource. We prioritize learning by understanding, so we found it critical to find a way to teach with AI that's interactive, communicative and most importantly, impactful. By using the <b>Feynman</b> method, users are prompted probing questions, thoughtful explainations, and a bridge to learning. Plus our whiteboard feature for more visual demonstrations, Project Astaea is currently in <b>development</b> to create more study technique bots- so stay tuned. So, what are you waiting for?</p>
+            <p class="start-your-journey">Start your journey...</p>
+            </div>
+
+            <div id="horizontal-line-2"></div>
+
+
+            <div id="chat-history"></div>
+            <button id="new-chat-button">+</button>
+            </div>
+        </div>
+
+        <!--ONBOARDING-->
+        <div id="onboarding" style="display:none">
+            <div id="onboardingContainer">
+            <p class="freynmantechnique">@freynmantechnique</p>
+            <h2 class="WhatsYourTopic">What's your topic?</h2>
+            <p class="SomeOnboarding1">Some Onboarding...</p>
+            <textarea id="topic-input" placeholder="I want to learn..."></textarea>
+            <button id="next-1">></button>
+            </div>
+        </div>
+
+            <div id="onboarding-2" style="display:none">
+            <div id="onboardingContainer2">
+            <p class="freynmantechnique">@freynmantechnique</p>
+            <p class="WhatsYourLearningLevel">What's your learning level?</p>
+            <h2 class="SomeOnboarding2">Some Onboarding...</h2>
+            <select id="level-select">
+                <option class="option1">Beginner</option>
+                <option class="option2">Intermediate</option>
+                <option class="option3">Advanced</option>
+            </select>
+            <button id="next-2">></button>
+        </div>
+        </div>
+            
+            <div id="onboarding-3" style="display:none">
+            <div id="onboardingContainer3">
+            <p class="freynmantechnique">@freynmantechnique</p>
+            <p class="proficiencyLevel">Rate your proficiency level</p>
+            <h2 class="SomeOnboarding3">Some Onboarding...</h2>
+            <select id="proficiency-select">
+                <option>I know nothing about this</option>
+                <option>I know a little</option>
+                <option>I know quite a bit</option>
+            </select>
+            <button id="next-3">></button>
+        </div>
+        </div>
+
+            <div id="onboarding-4" style="display:none">
+                <div id="onboardingContainer4">
+                <div id="centerContent">
+                <p class="freynmantechnique4">@freynmantechnique</p>
+                <p class="UploadFile">Upload any reference files</p>
+                <h2 class="SomeOnboarding4">Some Onboarding...</h2>
+                </div>
+                <div id="inputDiv">
+                <input type="file" id="fileInput" accept=".pdf, .txt">
+                </div>
+                <div id="fileButtons">
+                <button id="skip">⏯</button>
+                <button id="start-chat-button">></button>
+                </div>
+                </div>
+         </div>
+
+
+        <!--CHAT-->
+        <div id="chat-screen" style="display:none">
+            <div class="coolTitle">
+            <p class="freynmantechnique5">@freynmantechnique</p>
+            </div>
+            <div id="chat-history-box"></div>
+            <div id="chat-input-area">
+            <textarea id="user-input" placeholder="Explain your topic as if teaching it..."></textarea>
+            <button id="send-button">></button>
+            </div>
+            <!--WHITEBOARD FUNCTION-->
+            <div id="whiteboard-container">
+            <button id="whiteboard-toggle">Whiteboard</button>
+            <canvas id="whiteboard" style= "display:none; border: 1px solid black"></canvas>
+            <div id="whiteboard-controls" style= "display:none;">
+            <button id="submit-drawing">Submit</button>
+            <button id="clear-board">Clear</button>
+            </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
